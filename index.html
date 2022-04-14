@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<script type="text/javascript">
+document.getElementById("btn4").addEventListener("click",Check);
+   
+ function Check(){
+  //alert("Inside function");
+   var pw = document.getElementById("rec").value;
+
+   var pw2 = document.getElementById("rec1").value;
+   var len=pw.length;
+   //alert(len);
+  if(pw == "") {  
+     document.getElementById("message").innerHTML = "Fill the password please!";  
+     return false;  
+  }  
+ //minimum password length validation  
+  if(len< 8) {  
+     document.getElementById("message").innerHTML = "Password length must be atleast 8 characters";  
+     return false;  
+  }  
+  if( /^[a-zA-Z]+$/.test(pw)){
+   document.getElementById("message").innerHTML = "Password must not contain characters only from the alphabet";
+   return false;
+  }
+  //all are satisfied check two strings
+  if(pw!=pw2){
+   document.getElementById("message").innerHTML = "Passwords do not match";
+   return false;
+  }
+else{
+ //success matched redirect or change text as required
+document.getElementById("dis").style.display='block';
+   document.getElementById("dup").style.display='block';
+   document.getElementById("dis1").style.display='none';
+}
+ 
+//maximum length of password validation  
+ 
+}  
+</script>
+<style type="text/css">
+body{
+font-family: 'Avenir Next';
+src: url("http://www.yoursite.com/fonts/Avenir_Next.otf");
+}
+.header
+{
+position: absolute;
+width: 1515px;
+height: 104px;
+left: 0px;
+top: 0px;
+}
+.headerdiv
+{
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+background: #33A0D9;
+}
+.Asset
+{
+position: absolute;
+left: 6.94%;
+right: 80.21%;
+top: 20.19%;
+bottom: 12.5%;
+}
+.join
+{
+position: absolute;
+left: 54.1%;
+right: 34.51%;
+top: 34.62%;
+bottom: 34.62%;
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 150%;
+text-align: center;
+color: #000000;
+}
+.leader
+{
+position: absolute;
+left: 70.76%;
+right: 18.12%;
+top: 34.62%;
+bottom: 34.62%;
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 150%;
+text-align: center;
+color: #000000;
+}
+.Login
+{
+position: absolute;
+left: 87.15%;
+right: 2.85%;
+top: 34.62%;
+bottom: 34.62%;
+font-family: 'Avenir Next';
+src: url("http://www.yoursite.com/fonts/Avenir_Next.otf");
+}
+.btnn{
+position: absolute;
+left: 87.15%;
+right: 2.85%;
+top: 24.04%;
+bottom: 24.04%;
+background: #FFFFFF;
+border-radius: 8px;
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 150%;
+text-align: center;
+color: #000000;
+}
+.back
+{
+position: absolute;
+width: 1440px;
+height: 593px;
+left: 0px;
+top: 425px;
+}
+.ane
+{
+position: absolute;
+width: 389px;
+height: 58px;
+left: 483px;
+top: 287px;
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 120%;
+color: #000000;
+}
+.frame
+{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+position: absolute;
+width: 261px;
+height: 33px;
+left: 483px;
+top: 375px;
+font-family: 'Avenir Next';
+src: url("http://www.yoursite.com/fonts/Avenir_Next.otf");
+}
+.new
+{
+width: 261px;
+height: 33px;
+}
+.btn1
+{
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 33px;
+letter-spacing: 0.205em;
+color: #000000;
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 66px 0px;
+}
+#rec
+{
+position: absolute;
+width: 417px;
+height: 45px;
+left: 483px;
+top: 425px;
+background: #F2F2F2;
+border: 3px solid #000000;
+box-sizing: border-box;
+border-radius: 2px;
+}
+.frame1
+{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+position: absolute;
+width: 425px;
+height: 33px;
+left: 483px;
+top: 528px;
+}
+.neww
+{
+width: 425px;
+height: 33px;
+}
+.btn2
+{
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 33px;
+letter-spacing: 0.205em;
+color: #000000;
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 66px 0px;
+white-space: nowrap;
+}
+#rec1
+{
+position: absolute;
+width: 417px;
+height: 45px;
+left: 483px;
+top: 578px;
+background: #F2F2F2;
+border: 3px solid #000000;
+box-sizing: border-box;
+border-radius: 2px;
+}
+#set
+{
+position: absolute;
+width: 441px;
+height: 68px;
+left: 240px;
+top: 350px;
+}
+#reset
+{
+position: absolute;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 36px;
+letter-spacing: 0.205em;
+color: #FFFFFF;
+}
+#btn4
+{
+position: absolute;
+width: 441px;
+height: 68px;
+left: 480px;
+top: 700px;
+background: #000000;
+border-radius: 10px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 36px;
+letter-spacing: 0.205em;
+color: #FFFFFF;
+}
+footer
+{
+position: fixed;
+padding: 20px;
+left: 0;
+width: 100%;
+bottom: 0;
+background-color: #2180B3;
+}
+#about{
+position: static;
+width: 108px;
+height: 36px;
+left: 10px;
+top: 10px;
+display: inline-block;
+font-family: 'Avenir Next';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 150%;
+color: #FFFFFF;
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 49px;
+}
+#privacy{
+position: static;
+width: 160px;
+height: 36px;
+left: 167px;
+top: 10px;
+display: inline-block;
+font-family: 'Avenir Next';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 150%;
+color: #FFFFFF;
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 49px;
+}
+#tutorial{
+position: static;
+width: 100px;
+height: 36px;
+left: 376px;
+top: 10px;
+display: inline-block;
+font-family: 'Avenir Next';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 150%;
+color: #FFFFFF;
+flex: none;
+order: 2;
+flex-grow: 0;
+margin: 0px 49px;
+}
+#terms{
+position: static;
+width: 191px;
+height: 36px;
+left: 525px;
+top: 10px;
+display: inline-block;
+font-family: 'Avenir Next';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 150%;
+color: #FFFFFF;
+flex: none;
+order: 3;
+flex-grow: 0;
+margin: 0px 49px;
+}
+#message{
+position: absolute;
+width: 183px;
+height: 21px;
+left: 490px;
+top: 634px;
+font-family: 'Poppins';
+font-style: italic;
+font-weight: 700;
+font-size: 14px;
+line-height: 21px;
+color: #EB5757;
+white-space: nowrap;
+}
+#dis{
+  display: none;
+}
+#dup
+{
+display: none;
+position: absolute;
+width: 481px;
+height: 58px;
+left: 500px;
+top: 287px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 120%;
+color: #000000;
+}
+p
+{
+position: absolute;
+width: 543px;
+height: 72px;
+left: 500px;
+top: 340px;
+font-family: 'Avenir Next';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 150%;
+color: #000000;
+}
+#btn5
+{
+position: absolute;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 36px;
+letter-spacing: 0.205em;
+color: #FFFFFF;
+width: 492px;
+height: 68px;
+left: 500px;
+top: 485px;
+background: #000000;
+border-radius: 10px;
+}
+
+
+</style>
+</head>
+<body>
+<div class="header">
+<div class="headerdiv">
+<div class="Asset"><img src="Asset 1_1 1.png"></div>
+<div class="join" style="font-family: Avenir Next;">Join a Race</div>
+<div class="leader">Leaderboard</div>
+<div class="login"><button class="btnn">Login</button></div>
+</div>
+</div>
+<div class="back">
+<img src="Back drop 1.png">
+</div>
+<div id="dis1">
+<a class="ane">Password Reset</a>
+<div class="frame"><div class="new"><a class="btn1">NEW PASSWORD</a></div></div>
+<input id="rec" type="password">
+<!--<span id="message" style="color: red;"></span><-->
+<div class="frame1"><div class="neww"><a class="btn2">RE-ENTER NEW PASSWORD</a></div></div>
+<input id="rec1" type="password"><br>
+<span id="message" ></span>
+<button type="button" id="btn4" onclick="Check()" value="RESET PASSWORD">RESET PASSWORD</button>
+</div>
+<div id="dis">
+<div id="dup">Password Changed</div>
+<p>Your password has been updated! Now get back in the driver seat, racers are waiting for you!</p>
+<button id="btn5">JOIN A RACE</button>
+</div>
+
+<footer>
+<div id="footer-items">
+<div id="about">About Us</div>
+<div id="privacy">Privacy Policy</div>
+<div id="tutorial">Tutorials</div>
+<div id="terms" >Terms of Service</div></div>
+</footer>
+</body>
+</html>
